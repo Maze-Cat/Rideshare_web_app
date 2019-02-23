@@ -1,0 +1,7 @@
+2.3 Find two problems:
+		1.Share_or_not field can be any arbitrary value, which is not possible to happen
+		2.The receivers of the confirmation mail don't change
+
+2.4 Fixed email issue.
+ 		The problem is because I used request.user.email instead of form.cleaned_data['email'],
+ 		the latter is the real data stored while the former is the local unsaved data.

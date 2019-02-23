@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+    
+    {% load static %}
+
+    <!-- Bootstrap core CSS -->
+    <link href={% static 'home/vendor/bootstrap/css/bootstrap.min.css' %} rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href={% static 'home/vendor/fontawesome-free/css/all.min.css' %} rel="stylesheet">
+    <link href={% static 'home/vendor/simple-line-icons/css/simple-line-icons.css' %} rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href={% static 'home/css/landing-page.min.css' %} rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Ride Sharing Service</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                {% if user.is_authenticated %}
+                <ul class="nav navbar-nav">
+                  
+                  <li><a href="/account/logout">Log out</a></li>
+                  <li><a href="/account/profile">Profile</a></li>
+                  <li><a href="/account/profile/edit">Edit Profile</a></li>
+                  <li><a href="/account/change_password">Change Password</a></li>
+                  <li><a href="/account/role">Change Role</a></li>
+                </ul>
+                {% else %}
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/account/login">Login</a></li>
+                  <li><a href="/account/register">Register</a></li>
+                </ul>
+                {% endif %}
+              </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+  
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      
+      <div class="container">
+        <div class="row">
+           		<div class="col-xl-9 mx-auto">
+            		<h4 class="mb-5">Driver Dashboard</h4>
+          		</div>
+
+          <div class="col-md-4 col-lg-6 col-xl-9 mx-auto">
+            
+            <form action="/account/driver/search1" method="get">
+                <div class="col-xl-9 mb-4 mx-auto">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Claim a new trip</button>
+                </div>
+            </form>
+
+            <form action="/account/driver/request/view1" method="get">
+                <div class="col-xl-9 mb-4 mx-auto">
+                  <button type="submit" class="btn btn-block btn-lg btn-primary">Inprocess trips</button>
+              </div>
+            </form>
+         
+        </div>
+      </div>
+     </div>
+
+    </header>
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src={% static 'home/vendor/jquery/jquery.min.js' %}></script>
+    <script src={% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js' %}></script>
+
+  </body>
+
+</html>
+
+
