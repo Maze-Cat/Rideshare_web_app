@@ -128,8 +128,8 @@ LOGIN_REDIRECT_URL = '/account/role'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'yuchenyangyyc@outlook.com'
-EMAIL_HOST_PASSWORD = 'lao4yangli'
+EMAIL_HOST_USER = 'xxxx@outlook.com'
+EMAIL_HOST_PASSWORD = 'xxxxxxx'
 
 # confirmation days
 CONFIRM_DAYS = 7
